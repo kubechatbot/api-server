@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  containers:
+    - name: hello
+      image: qcomcas/express-demo:latest
+      resources:
+        limits:
+          cpu: 100m
+          memory : 128mi
+      ports:
+        - containerPort: 8080
