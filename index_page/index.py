@@ -8,3 +8,4 @@ def index():
 @index_route.route('/login', methods=['GET'])
 def login_get():
     return 'login'
+
